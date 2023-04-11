@@ -14,7 +14,7 @@ hnddtest1 登录成功
   
     window.onload=function(){
         var ueTimer=setInterval(function(){
-            if(ue){
+            if(window.hasOwnProperty("ue")){
                clearInterval(ueTimer);
                onUEReady();
             }
