@@ -8,11 +8,11 @@
 hnddtest1 登录成功
 </body>
 <script>
+    function hello(){
+        document.writeln("hello");
+    }
     function load()
     {
-         for (var obj in window) {
-            document.writeln(obj.toString());
-        }
         ue.main_login.login("abcd").then(function(res) {});
     }
 </script>
