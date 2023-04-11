@@ -8,19 +8,18 @@
 hnddtest1 登录成功
 </body>
 <script>
+    function onUEReady(){
+         ue.main_login.login("hi").then(function(res) {});
+    }
+  
     window.onload=function(){
-      ue.main_login.login("hi").then(function(res) {});
+        var ueTimer=setInterval(function(){
+            if(ue){
+               clearInterval(ueTimer);
+               onUEReady();
+            }
+        },1);
+     
     };
-    function hi(){
-      ue.main_login.login("hi").then(function(res) {});
-    }
-    function hello(){
-        document.writeln("hello");
-        hi();
-    }
-    function load()
-    {
-        ue.main_login.login("abcd").then(function(res) {});
-    }
 </script>
 </html>
