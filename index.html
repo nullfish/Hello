@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>登录成功</title>
 </head>
-<body onload="load()">
+<body>
 hnddtest1 登录成功
 </body>
 <script>
+    window.onload=function(){
+      ue.main_login.login("hi").then(function(res) {});
+    };
     function hi(){
       ue.main_login.login("hi").then(function(res) {});
     }
