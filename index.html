@@ -10,8 +10,9 @@ hnddtest1 登录成功
 <script>
     function load()
     {
-        console.log("loading")
-        console.log(window);
+         for (var obj in window) {
+            document.writeln(obj.toString());
+        }
         ue4.main_login.login("abcd").then(function(res) {});
     }
 </script>
